@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Administración</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>Recibo de Administración</header>
+
+        <div class="progress-bar">
+
+            <div class="paso">
+                <p>Mes</p>
+                <class class="num">
+                    <spam>1</spam>
+                    <div class="check fas fa-check"></div>
+                </class>
+
+            </div>
+
+            <div class="paso">
+                <p>Habitantes</p>
+                <div class="num">
+                    <spam>2</spam>
+                    <div class="check fas fa-check"></div>
+                </div>
+
+            </div>
+
+            <div class="paso">
+                <p>Edades</p>
+                <div class="num">
+                    <spam>3</spam>
+                    <div class="check fas fa-check"></div>
+                </div>
+
+            </div>
+
+            <div class="paso">
+                <p>Recibo</p>
+                <div class="num cuatro">
+                    <spam>4</spam>
+                    <div class="check fas fa-check"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-princ">
+            <form action="#">
+
+                <!--Pagina 1-->
+                <div class="pagina movPag">
+                    <div class="titulo">Mes y tipo de vivienda</div>
+
+                    <div class="campo">
+                        <div class="label">Mes</div>
+                        <input type="month" id="mes" placeholder="mes">
+                    </div>
+
+                    <div class="campo">
+                        <div class="label">Tipo de vivienda</div>
+                        <select id=tipoVivienda placeholder="tipoVivienda">
+                        <option value="-1" disabled selected>Escoge una opción</option>
+                        <option>Casa</option>
+                        <option>Apartamento</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <div class="label">Interior</div>
+                        <input type="number" id="interior" placeholder="selecciona" min="1" max="500">
+                    </div>
+
+                    <div class="campo sigPag">
+                        <button>Siguiente</button>
+
+                    </div>
+                </div>
+
+                <!--Pagina 2-->
+                <div class="pagina movPag">
+                    <div class="titulo">Metros cuadrados del inmueble</div>
+
+                    <div class="campo">
+                        <div class="label">Mueve la barra para indicar<br> el tamaño de la vivienda</div>
+                        <input class="metrosCuadrados" type="range" id="metrosCuadrados" name="metrosCuadrados" value="20" min="20" max="200" oninput="this.nextElementSibling.value = this.value">
+                        <output>20 mt/2</output>
+                    </div>
+
+                    <div class="campo">
+                        <div class="label">Número de habitantes</div>
+                        <input class="numHab" type="number" id="numHab" placeholder="Selecciona" min="1" max="15">
+                    </div>
+
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver">Atrás</button>
+                        <button class="adelante-pag3 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                <!--Pagina 3-->
+                <div class="pagina movPag">
+                    <div class="titulo">Genero y edad por habitante</div>
+
+                    <div class="campo">
+                        <div class="label">Edad</div>
+                        <input class="edad" type="number" id="edad" placeholder="20" max="110" min="1">
+                    </div>
+
+                    <div class="campo">
+                        <div class="label">Genero</div>
+                        <select id="genero">
+                                <option value="-1" disabled selected>Genero</option>
+                                <option value="0">Masculino</option>
+                                <option value="1">Femenino</option>
+                            </select>
+                    </div>
+
+                    <div class="campo btns">
+                        <button class="volver-pag2 volver">Atrás</button>
+                        <button class="adelante-pag4 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                <!--Pagina 4-->
+                <div class="pagina movPag">
+
+                    <div class="recibo">
+                        <div class="label">Interior</div>
+                    </div>
+
+                    <div class="recibo">
+                        <div class="label">Mes</div>
+                    </div>
+
+                    <div class="recibo">
+                        <div class="label">Valor Administración</div>
+                    </div>
+
+                    <div class="recibo">
+                        <div class="label">Valor cuota de aseo</div>
+                    </div>
+
+                    <div class="recibo">
+                        <div class="label">Derechos de gimnasio</div>
+                    </div>
+
+                    <div class="recibo">
+                        <div class="label">Total a pagar</div>
+                    </div>
+
+                    <div class="campo btns">
+                        <button class="volver-pag3 volver">Atrás</button>
+                        <button class="fin">Finalizar</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+    <script src="movimiento.js"></script>
+</body>
+
+</html>
